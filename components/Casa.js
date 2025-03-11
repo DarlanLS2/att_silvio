@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
 
 export default function Casa(props) {
   return (
@@ -12,10 +12,12 @@ export default function Casa(props) {
         <View style={styles.main}>
             <TouchableOpacity style={styles.main__btn} onPress={() => {props.navigation.navigate("Placa_mae")}}>
                 <Text style={styles.main__text}>Placa Mãe</Text>
+                <Image source={require('../assets/placa_mae.jpg')}/>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.main__btn} onPress={() => {props.navigation.navigate("Placa_video")}}>
                 <Text style={styles.main__text}>Placa de Video</Text>
+                <Image source={require('../assets/placa_video.jpg')}/>
             </TouchableOpacity>
         </View>
     </View>
